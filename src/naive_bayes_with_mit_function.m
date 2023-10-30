@@ -18,7 +18,7 @@ for i = 1:size(X1, 2)
     end
 end
 
-Y = (["Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Cauliflower mosaic" ; "Cauliflower mosaic" ; "Cauliflower mosaic" ; "Cauliflower mosaic" ; "Cauliflower mosaic"]);
+Y = categorical(["Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ]);
 
 Mdl = fitcnb(X, Y);
 
