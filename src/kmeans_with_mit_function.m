@@ -1,4 +1,4 @@
-%MATLAB code 
+%MATLAB code to generate 2D images for plant viruses, apply kmeans classification algorithm
 
 clear;
 clc;
