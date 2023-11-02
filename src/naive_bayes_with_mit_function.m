@@ -1,3 +1,5 @@
+%MATLAB code to generate 2D images for plant viruses, apply naive bayes classification algorithm
+
 clear;
 clc;
 X_comb = [];
@@ -20,6 +22,7 @@ end
 
 Y = categorical(["Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Tobacco mosaic" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Banana bunchy" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ; "Cauliflower mossaic" ]);
 
+%Apply fitcnb MATLAB function
 Mdl = fitcnb(X, Y);
 
 disp(Mdl);
@@ -34,7 +37,7 @@ isLabels1 = resubPredict(Mdl);
 
 ConfusionMat1 = confusionchart(Y,isLabels1);
 
-
+%function to generate 2D gray scale images for plant virus genomes
 function f = mit_to_img(mitochondria) 
     seq= mitochondria(1:400);
     img(500,500) = 50; %% define image
