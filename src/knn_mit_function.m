@@ -3,6 +3,7 @@ clear;
 clc;
 X_comb = [];
 
+%Genomes downloaded from NCBI database that belongs to 3 virus classes: Tobacco mosaic virus, Banana bunchy top virus, and Cauliflower mosaic virus
 genome = {'HE818416' 'HE818417' 'HE818452' 'HE818453' 'HE818454' 'MT433346' 'MT433347' 'MT433348' 'MT433349' 'MT433350' 'AB863198' 'AB863199' 'AB863200' 'AB863201' 'AB863202'};
 
 for i = 1:length(genome)
