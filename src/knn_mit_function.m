@@ -1,3 +1,4 @@
+%MATLAB code to generate 2D images for plant viruses, apply knn classification algorithm
 clear;
 clc;
 X_comb = [];
@@ -29,8 +30,9 @@ Mdl.Prior
 
 predictedY = resubPredict(Mdl);
 
-cm = confusionchart(Y,predictedY);
+cm = confusionchart(Y,predicted);
 
+%function to generate 2D gray scale images for plant virus genomes
 function f = mit_to_img(mitochondria) 
     seq= mitochondria(1:400);
     img(500,500) = 50; %% define image
