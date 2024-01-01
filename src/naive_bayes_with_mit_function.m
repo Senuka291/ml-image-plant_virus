@@ -12,7 +12,7 @@ for i = 1:length(genome)
     mitochondria = getgenbank(genome{i},'SequenceOnly',true);
     fimg = mit_to_img(mitochondria);
     S1 = reshape(fimg,[],1);
-    X_comb = [X_comb,S1]
+    X_comb = [X_comb,S1];
 end
 X1 = transpose(X_comb);
 X=[];
