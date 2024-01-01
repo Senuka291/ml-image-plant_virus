@@ -7,6 +7,7 @@ X_comb = [];
 genome = {'HE818416' 'HE818417' 'HE818452' 'HE818453' 'HE818454' 'MT433346' 'MT433347' 'MT433348' 'MT433349' 'MT433350' 'AB863198' 'AB863199' 'AB863200' 'AB863201' 'AB863202'};
 
 for i = 1:length(genome)
+    disp(i);
     mitochondria = getgenbank(genome{i},'SequenceOnly',true);
     fimg = mit_to_img(mitochondria);
     S1 = reshape(fimg,[],1);
@@ -31,7 +32,7 @@ Mdl.Prior
 
 predictedY = resubPredict(Mdl);
 
-cm = confusionchart(Y,predicted);
+cm = confusionchart(Y,predictedY);
 
 %function to generate 2D gray scale images for plant virus genomes
 function f = mit_to_img(mitochondria) 
